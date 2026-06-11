@@ -81,3 +81,15 @@ reports/
 
 # TypeScript compiled output
 *.js.map
+
+# Compiled JS from TypeScript (keep .ts sources only)
+apps/backend/src/**/*.js
+apps/backend/src/**/*.js.map
+apps/orchestrator/src/**/*.js
+apps/orchestrator/src/**/*.js.map
+apps/frontend/src/**/*.js
+apps/frontend/src/**/*.js.map
+libraries/**/src/**/*.js
+libraries/**/src/**/*.js.map
+tests/**/*.js
+tests/**/*.js.map

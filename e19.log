@@ -1,7 +1,0 @@
-[ioredis] Unhandled error event: Error: connect ETIMEDOUT
-    at Socket.<anonymous> (D:\Prospektlab-bot\postiz-app\node_modules\ioredis\built\Redis.js:171:41)
-    at Object.onceWrapper (node:events:638:28)
-    at Socket.emit (node:events:524:28)
-    at Socket._onTimeout (node:net:609:8)
-    at listOnTimeout (node:internal/timers:594:17)
-    at process.processTimers (node:internal/timers:529:7)
