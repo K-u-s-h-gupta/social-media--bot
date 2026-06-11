@@ -21,8 +21,10 @@ class MockRedis {
   // Add other Redis methods as needed for your tests
 }
 
-// Use real Redis if REDIS_URL is defined, otherwise use MockRedis
-export const ioRedis = process.env.REDIS_URL
+const isTestEnv = process.env.NODE_ENV === 'test' || !!process.env.JEST_WORKER_ID;
+
+// Use real Redis in runtime, but keep tests on the in-memory mock.
+export const ioRedis = process.env.REDIS_URL && !isTestEnv
   ? new Redis(process.env.REDIS_URL, {
       maxRetriesPerRequest: null,
       connectTimeout: 10000,

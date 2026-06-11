@@ -43,6 +43,9 @@ model Organization {
   webhooks            Webhooks[]
   oauthApp            OAuthApp[]
   oauthAuthorizations OAuthAuthorization[]
+  swarmConfig         SwarmConfig?
+  swarmLogs           SwarmLog[]
+  swarmCredentials    SwarmCredential[]
 
   @@index([apiKey])
   @@index([streakSince])
@@ -967,4 +970,92 @@ model Announcement {
   description String
   color       AnnouncementColor @default(INFO)
   createdAt   DateTime          @default(now())
+}
+
+model SwarmConfig {
+  id             String       @id @default(uuid())
+  organizationId String       @unique
+  config         Json
+  status         String       @default("stopped")
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  organization   Organization @relation(fields: [organizationId], references: [id])
+}
+
+model SwarmLog {
+  id             String       @id @default(uuid())
+  organizationId String
+  message        String
+  createdAt      DateTime     @default(now())
+  organization   Organization @relation(fields: [organizationId], references: [id])
+
+  @@index([organizationId, createdAt])
+}
+
+model SwarmCredential {
+  id             String           @id @default(uuid())
+  organizationId String
+  platform       String
+  username       String
+  passwordEnc    String           @db.Text
+  name           String?
+  sessionToken   String?          @db.Text
+  sessionExpiry  DateTime?
+  sessionData    Json?
+  enabled        Boolean          @default(true)
+  lastLoginAt    DateTime?
+  loginError     String?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  organization   Organization     @relation(fields: [organizationId], references: [id])
+  actionLogs       SwarmActionLog[]
+  deploymentAgents SwarmDeploymentAgent[]
+
+  @@unique([organizationId, platform, username])
+  @@index([organizationId, platform])
+}
+
+model SwarmDeployment {
+  id             String                 @id @default(uuid())
+  organizationId String
+  prompt         String                 @db.Text
+  status         String                 @default("running")
+  createdAt      DateTime               @default(now())
+  stoppedAt      DateTime?
+  agents         SwarmDeploymentAgent[]
+
+  @@index([organizationId, status])
+}
+
+model SwarmDeploymentAgent {
+  id             String           @id @default(uuid())
+  deploymentId   String
+  credentialId   String
+  platform       String
+  username       String
+  status         String           @default("running")
+  lastActionAt   DateTime?
+  errorMessage   String?
+  createdAt      DateTime         @default(now())
+  deployment     SwarmDeployment  @relation(fields: [deploymentId], references: [id], onDelete: Cascade)
+  credential     SwarmCredential  @relation(fields: [credentialId], references: [id])
+
+  @@index([deploymentId])
+  @@index([credentialId])
+}
+
+model SwarmActionLog {
+  id             String          @id @default(uuid())
+  organizationId String
+  credentialId   String
+  agentType      String
+  actionType     String
+  status         String
+  detail         String          @db.Text
+  metadata       Json?
+  createdAt      DateTime        @default(now())
+  credential     SwarmCredential @relation(fields: [credentialId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, createdAt])
+  @@index([credentialId, createdAt])
 }

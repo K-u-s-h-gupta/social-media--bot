@@ -1,0 +1,25 @@
+[31m[Nest] 15872  - [39m11/06/2026, 1:05:24 pm [31m  ERROR[39m [38;5;3m[DeploymentService] [39m[31mFailed to start agent for b2e5224d-9be3-490b-9e0a-ec4eaad5698d: elementHandle.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <input type="text" inputmode="text" name="username_or_email" pattern="^[a-zA-Z0-9@._+\-]+$" id="jf-input-username_or_email" value="kushgupta2019@gmail.com" autocomplete="username webauthn" class="jf-element jf-float-input"/> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <input type="text" inputmode="text" name="username_or_email" pattern="^[a-zA-Z0-9@._+\-]+$" id="jf-input-username_or_email" value="kushgupta2019@gmail.com" autocomplete="username webauthn" class="jf-element jf-float-input"/> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    52 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <input type="text" inputmode="text" name="username_or_email" pattern="^[a-zA-Z0-9@._+\-]+$" id="jf-input-username_or_email" value="kushgupta2019@gmail.com" autocomplete="username webauthn" class="jf-element jf-float-input"/> intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+[39m

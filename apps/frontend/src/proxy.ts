@@ -1,65 +1,25 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { getCookieUrlFromDomain } from '@gitroom/helpers/subdomain/subdomain.management';
-import { internalFetch } from '@gitroom/helpers/utils/internal.fetch';
-import acceptLanguage from 'accept-language';
-import {
-  cookieName,
-  headerName,
-  languages,
-} from '@gitroom/react/translation/i18n.config';
-acceptLanguage.languages(languages);
 
-// This function can be marked `async` if using `await` inside
 export async function proxy(request: NextRequest) {
   const nextUrl = request.nextUrl;
   const authCookie =
     request.cookies.get('auth') ||
     request.headers.get('auth') ||
     nextUrl.searchParams.get('loggedAuth');
-  const lng = request.cookies.has(cookieName)
-    ? acceptLanguage.get(request.cookies.get(cookieName).value)
-    : acceptLanguage.get(
-        request.headers.get('Accept-Language') ||
-          request.headers.get('accept-language')
-      );
-
-  const requestHeaders = new Headers(request.headers);
-  if (lng) {
-    requestHeaders.set(headerName, lng);
-  }
-
-  const topResponse = NextResponse.next({
-    request: {
-      headers: requestHeaders,
-    },
-  });
-
-  if (lng) {
-    topResponse.headers.set(cookieName, lng);
-  }
-
-  if (nextUrl.pathname.startsWith('/modal/') && !authCookie) {
-    return NextResponse.redirect(new URL(`/auth/login-required`, nextUrl.href));
-  }
 
   if (
-    nextUrl.pathname.startsWith('/uploads/') ||
-    nextUrl.pathname.startsWith('/p/') ||
-    nextUrl.pathname.startsWith('/provider/') ||
-    nextUrl.pathname.startsWith('/icons/')
+    nextUrl.pathname.startsWith('/swarm') ||
+    nextUrl.pathname === '/'
   ) {
-    return topResponse;
+    return NextResponse.next({
+      request: {
+        headers: new Headers(request.headers),
+      },
+    });
   }
 
-  if (
-    nextUrl.pathname.startsWith('/integrations/social/') &&
-    nextUrl.href.indexOf('state=login') === -1
-  ) {
-    return topResponse;
-  }
-
-  // If the URL is logout, delete the cookie and redirect to login
   if (nextUrl.href.indexOf('/auth/logout') > -1) {
     const response = NextResponse.redirect(
       new URL('/auth/login', nextUrl.href)
@@ -87,13 +47,12 @@ export async function proxy(request: NextRequest) {
   }
 
   const org = nextUrl.searchParams.get('org');
-  const url = new URL(nextUrl).search;
   if (!nextUrl.pathname.startsWith('/auth') && !authCookie) {
     const providers = ['google', 'settings'];
     const findIndex = providers.find((p) => nextUrl.href.indexOf(p) > -1);
     const additional = !findIndex
       ? ''
-      : (url.indexOf('?') > -1 ? '&' : '?') +
+      : (nextUrl.href.indexOf('?') > -1 ? '&' : '?') +
         `provider=${(findIndex === 'settings'
           ? process.env.POSTIZ_GENERIC_OAUTH
             ? 'generic'
@@ -101,14 +60,14 @@ export async function proxy(request: NextRequest) {
           : findIndex
         ).toUpperCase()}`;
     return NextResponse.redirect(
-      new URL(`/auth${url}${additional}`, nextUrl.href)
+      new URL(`/auth${additional}`, nextUrl.href)
     );
   }
 
-  // If the url is /auth and the cookie exists, redirect to /
   if (nextUrl.pathname.startsWith('/auth') && authCookie) {
-    return NextResponse.redirect(new URL(`/${url}`, nextUrl.href));
+    return NextResponse.redirect(new URL(`/`, nextUrl.href));
   }
+
   if (nextUrl.pathname.startsWith('/auth') && !authCookie) {
     if (org) {
       const redirect = NextResponse.redirect(new URL(`/`, nextUrl.href));
@@ -126,15 +85,19 @@ export async function proxy(request: NextRequest) {
       });
       return redirect;
     }
-    return topResponse;
+    return NextResponse.next({
+      request: {
+        headers: new Headers(request.headers),
+      },
+    });
   }
+
   try {
     if (org) {
+      const { internalFetch } = await import('@gitroom/helpers/utils/internal.fetch');
       const { id } = await (
         await internalFetch('/user/join-org', {
-          body: JSON.stringify({
-            org,
-          }),
+          body: JSON.stringify({ org }),
           method: 'POST',
         })
       ).json();
@@ -157,23 +120,22 @@ export async function proxy(request: NextRequest) {
       }
       return redirect;
     }
+
     if (nextUrl.pathname === '/') {
-      return NextResponse.redirect(
-        new URL(
-          !!process.env.IS_GENERAL ? '/launches' : `/analytics`,
-          nextUrl.href
-        )
-      );
+      return NextResponse.redirect(new URL('/swarm', nextUrl.href));
     }
 
-    return topResponse;
+    return NextResponse.next({
+      request: {
+        headers: new Headers(request.headers),
+      },
+    });
   } catch (err) {
     console.log('err', err);
     return NextResponse.redirect(new URL('/auth/logout', nextUrl.href));
   }
 }
 
-// See "Matching Paths" below to learn more
 export const config = {
   matcher: '/((?!api/|_next/|_static/|_vercel|[\\w-]+\\.\\w+).*)',
 };

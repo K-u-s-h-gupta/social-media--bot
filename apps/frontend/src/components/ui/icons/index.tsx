@@ -1,7 +1,6 @@
-import React, { FC, SVGProps, useEffect } from 'react';
+import React, { FC, SVGProps } from 'react';
 import clsx from 'clsx';
 import useCookie from 'react-use-cookie';
-import { modeEmitter } from '@gitroom/frontend/components/layout/mode.component';
 
 export type IconProps = SVGProps<SVGSVGElement> & {
   size?: number;
@@ -770,17 +769,7 @@ export const VerticalDividerIcon: FC<IconProps> = ({ className, ...props }) => (
 );
 
 export const NoMediaIcon: FC = () => {
-  const [mode, setMode] = useCookie('mode', 'dark');
-
-  useEffect(() => {
-    modeEmitter.on('mode', (value) => {
-      setMode(value);
-    });
-
-    return () => {
-      modeEmitter.removeAllListeners();
-    };
-  }, []);
+  const [mode] = useCookie('mode', 'dark');
 
   return (
     <>

@@ -1,0 +1,17 @@
+[31m[Nest] 9772  - [39m11/06/2026, 8:14:09 pm [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::4000[39m[38;5;3m +4ms[39m
+[31m[Nest] 9772  - [39m11/06/2026, 8:14:09 pm [31m  ERROR[39m [31mBackend failed to start on port 4000[39m
+[31m[Nest] 9772  - [39m11/06/2026, 8:14:09 pm [31m  ERROR[39m Error: listen EADDRINUSE: address already in use :::4000
+[90m    at Server.setupListenHandle [as _listen2] (node:net:1937:16)[39m
+[90m    at listenInCluster (node:net:1994:12)[39m
+[90m    at Server.listen (node:net:2099:7)[39m
+    at ExpressAdapter.listen [90m(D:\Prospektlab-bot\postiz-app\[39mnode_modules\[4m@nestjs[24m\platform-express\adapters\express-adapter.js:115:32[90m)[39m
+    at [90mD:\Prospektlab-bot\postiz-app\[39mnode_modules\[4m@nestjs[24m\core\nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen [90m(D:\Prospektlab-bot\postiz-app\[39mnode_modules\[4m@nestjs[24m\core\nest-application.js:178:16[90m)[39m
+    at async start [90m(D:\Prospektlab-bot\postiz-app\[39mdist\backend\apps\backend\src\main.js:66:9[90m)[39m {
+  code: [32m'EADDRINUSE'[39m,
+  errno: [33m-4091[39m,
+  syscall: [32m'listen'[39m,
+  address: [32m'::'[39m,
+  port: [33m4000[39m
+}

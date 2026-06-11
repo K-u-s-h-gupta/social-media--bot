@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="11" failures="0" errors="0" time="31.615">
-  <testsuite name="PermissionsService" errors="0" failures="0" skipped="0" timestamp="2025-03-24T05:53:33" time="31.496" tests="11">
-    <testcase classname="PermissionsService check() Verification Bypass (64) Bypass for Empty List" name="PermissionsService check() Verification Bypass (64) Bypass for Empty List" time="0.01">
+<testsuites name="jest tests" tests="13" failures="0" errors="0" time="2.886">
+  <testsuite name="SimpleAgent planning and execution" errors="0" failures="0" skipped="0" timestamp="2026-06-10T10:02:38" time="1.072" tests="7">
+    <testcase classname="SimpleAgent planning and execution parses object-shaped llm planner output and expands to the requested subagent count" name="SimpleAgent planning and execution parses object-shaped llm planner output and expands to the requested subagent count" time="0.014">
     </testcase>
-    <testcase classname="PermissionsService check() Verification Bypass (64) Bypass for Missing Stripe" name="PermissionsService check() Verification Bypass (64) Bypass for Missing Stripe" time="0.003">
+    <testcase classname="SimpleAgent planning and execution supports more than ten requested subagents" name="SimpleAgent planning and execution supports more than ten requested subagents" time="0.008">
     </testcase>
-    <testcase classname="PermissionsService check() Verification Bypass (64) No Bypass" name="PermissionsService check() Verification Bypass (64) No Bypass" time="0.002">
+    <testcase classname="SimpleAgent planning and execution builds instruction-driven reddit tasks with explicit subreddit" name="SimpleAgent planning and execution builds instruction-driven reddit tasks with explicit subreddit" time="0.004">
     </testcase>
-    <testcase classname="PermissionsService check() Channel Permission (82/87) All Conditions True" name="PermissionsService check() Channel Permission (82/87) All Conditions True" time="0.003">
+    <testcase classname="SimpleAgent planning and execution rejects reddit prompts that ask to create subreddits and spam at unsupported cadence" name="SimpleAgent planning and execution rejects reddit prompts that ask to create subreddits and spam at unsupported cadence" time="0.004">
     </testcase>
-    <testcase classname="PermissionsService check() Channel Permission (82/87) Channel With Option Limit" name="PermissionsService check() Channel Permission (82/87) Channel With Option Limit" time="0.003">
+    <testcase classname="SimpleAgent planning and execution falls back to safe reddit tasks when subreddit is missing" name="SimpleAgent planning and execution falls back to safe reddit tasks when subreddit is missing" time="0.004">
     </testcase>
-    <testcase classname="PermissionsService check() Channel Permission (82/87) Channel With Subscription Limit" name="PermissionsService check() Channel Permission (82/87) Channel With Subscription Limit" time="0.002">
+    <testcase classname="SimpleAgent planning and execution skips unsupported actions on limited platforms instead of pretending success" name="SimpleAgent planning and execution skips unsupported actions on limited platforms instead of pretending success" time="0.002">
     </testcase>
-    <testcase classname="PermissionsService check() Channel Permission (82/87) Channel Without Available Limits" name="PermissionsService check() Channel Permission (82/87) Channel Without Available Limits" time="0.003">
+    <testcase classname="SimpleAgent planning and execution records an execution error when platform action returns success=false" name="SimpleAgent planning and execution records an execution error when platform action returns success=false" time="0.005">
     </testcase>
-    <testcase classname="PermissionsService check() Channel Permission (82/87) Section Different from Channel" name="PermissionsService check() Channel Permission (82/87) Section Different from Channel" time="0.003">
+  </testsuite>
+  <testsuite name="DeploymentService" errors="0" failures="0" skipped="0" timestamp="2026-06-10T10:02:39" time="1.314" tests="4">
+    <testcase classname="DeploymentService runs dry-run planning without creating deployment records" name="DeploymentService runs dry-run planning without creating deployment records" time="0.006">
     </testcase>
-    <testcase classname="PermissionsService check() Monthly Posts Permission (97/110) Posts Within Limit" name="PermissionsService check() Monthly Posts Permission (97/110) Posts Within Limit" time="0.008">
+    <testcase classname="DeploymentService honors an explicit subagent count during dry-run planning" name="DeploymentService honors an explicit subagent count during dry-run planning" time="0.003">
     </testcase>
-    <testcase classname="PermissionsService check() Monthly Posts Permission (97/110) Posts Exceed Limit" name="PermissionsService check() Monthly Posts Permission (97/110) Posts Exceed Limit" time="0.003">
+    <testcase classname="DeploymentService fails fast when the planner produces no runnable tasks" name="DeploymentService fails fast when the planner produces no runnable tasks" time="0.003">
     </testcase>
-    <testcase classname="PermissionsService check() Monthly Posts Permission (97/110) Section Different with Posts Within Limit" name="PermissionsService check() Monthly Posts Permission (97/110) Section Different with Posts Within Limit" time="0.003">
+    <testcase classname="DeploymentService creates deployment and starts agent when plan is valid" name="DeploymentService creates deployment and starts agent when plan is valid" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="platform capability registry" errors="0" failures="0" skipped="0" timestamp="2026-06-10T10:02:40" time="0.111" tests="2">
+    <testcase classname="platform capability registry has capability metadata for every supported platform" name="platform capability registry has capability metadata for every supported platform" time="0.01">
+    </testcase>
+    <testcase classname="platform capability registry flags reddit with explicit subreddit requirement" name="platform capability registry flags reddit with explicit subreddit requirement" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>

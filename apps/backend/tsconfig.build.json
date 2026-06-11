@@ -4,13 +4,13 @@
   "compilerOptions": {
     "module": "CommonJS",
     "resolveJsonModule": true,
-    "declaration": true,
+    "declaration": false,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "target": "ES2021",
-    "sourceMap": true,
+    "sourceMap": false,
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
@@ -18,6 +18,11 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "outDir": "./dist"
+    "outDir": "../../dist/backend",
+    "isolatedModules": true,
+    "tsBuildInfoFile": "../../tmp/backend.tsbuildinfo"
+  },
+  "watchOptions": {
+    "excludeDirectories": ["node_modules", "dist", "../../dist"]
   }
 }

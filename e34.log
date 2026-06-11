@@ -1,0 +1,44 @@
+[backend] bootstrap:start
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +80ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDatabaseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mApiModule dependencies initialized[39m[38;5;3m +2ms[39m
+[backend] bootstrap:app-created
+[backend] bootstrap:listening 4000
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSwarmController {/swarm}:[39m[38;5;3m +572ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/platforms, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials/:id/name, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials/:id/toggle, PUT} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deploy, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/attachments/upload, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/attachments/delete, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:id/pause, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:id/resume, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:deploymentId/agents/:agentId, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:deploymentId/agents/:agentId/pause, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:deploymentId/agents/:agentId/resume, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/logs, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:01 am [32m    LOG[39m [38;5;3m[DeploymentService] [39m[32mMarked stale deployments as stopped on startup[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:01 am [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +4ms[39m
+Backend started successfully on port 4000
+[33m[Nest] 19644  - [39m12/06/2026, 1:58:01 am [33m   WARN[39m [38;5;3m[Configuration issue] [39m[33mMAIN_URL not set. [39m
+[33m[Nest] 19644  - [39m12/06/2026, 1:58:01 am [33m   WARN[39m [33mConfiguration issues found: 1[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:01 am [32m    LOG[39m [32mBackend is running on: http://localhost:4000[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:05 am [32m    LOG[39m [38;5;3m[CredentialService] [39m[32mRestored session for threads/dawane9965@hotkev.com[39m
+[33m[Nest] 19644  - [39m12/06/2026, 1:58:06 am [33m   WARN[39m [38;5;3m[Agent:threads/dawane9965@hotkev.com] [39m[33mLLM plan failed: OpenAI responded 429. Falling back to deterministic parser.[39m
+[95m[Nest] 19644  - [39m12/06/2026, 1:58:06 am [95m  DEBUG[39m [38;5;3m[Agent:threads/dawane9965@hotkev.com] [39m[95mnormalizePlans task #1: action="search_and_comment" resolved=search_and_comment[39m
+[95m[Nest] 19644  - [39m12/06/2026, 1:58:06 am [95m  DEBUG[39m [38;5;3m[Agent:threads/dawane9965@hotkev.com] [39m[95mnormalizePlans task #1 pushed: name=commenter_1[39m
+[95m[Nest] 19644  - [39m12/06/2026, 1:58:06 am [95m  DEBUG[39m [38;5;3m[Agent:threads/dawane9965@hotkev.com] [39m[95mnormalizePlans task #2: action="search_and_like" resolved=search_and_like[39m
+[95m[Nest] 19644  - [39m12/06/2026, 1:58:06 am [95m  DEBUG[39m [38;5;3m[Agent:threads/dawane9965@hotkev.com] [39m[95mnormalizePlans task #2 pushed: name=liker_1[39m
+[95m[Nest] 19644  - [39m12/06/2026, 1:58:06 am [95m  DEBUG[39m [38;5;3m[Agent:threads/dawane9965@hotkev.com] [39m[95mnormalizePlans after loop: 2 tasks, 0 warnings[39m
+[95m[Nest] 19644  - [39m12/06/2026, 1:58:06 am [95m  DEBUG[39m [38;5;3m[Agent:threads/dawane9965@hotkev.com] [39m[95mnormalizePlans before align: 2 tasks, requestedCount=null, stagger=false[39m
+[95m[Nest] 19644  - [39m12/06/2026, 1:58:06 am [95m  DEBUG[39m [38;5;3m[Agent:threads/dawane9965@hotkev.com] [39m[95mnormalizePlans result: 2 tasks after normalization, 0 warnings, 0 errors[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:06 am [32m    LOG[39m [38;5;3m[Agent:threads/dawane9965@hotkev.com] [39m[32mStarting for threads/dawane9965@hotkev.com[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:06 am [32m    LOG[39m [38;5;3m[Agent:threads/dawane9965@hotkev.com] [39m[32mUsing pre-planned tasks: commenter_1(45m), liker_1(30m)[39m
+[32m[Nest] 19644  - [39m12/06/2026, 1:58:07 am [32m    LOG[39m [38;5;3m[DeploymentService] [39m[32mStarted agent b0a0f820-7827-44de-b96e-723bf1ad2145 for threads/dawane9965@hotkev.com[39m

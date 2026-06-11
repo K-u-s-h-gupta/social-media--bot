@@ -1,0 +1,13 @@
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:4200
+- Network:       http://172.16.0.2:4200
+✓ Ready in 10.7s
+- Experiments (use with caution):
+  · clientTraceMetadata
+  · proxyTimeout: 90000
+
+🌐 i18next is maintained with support from Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙
+ GET / 307 in 2.6s (next.js: 772ms, proxy.ts: 730ms, application-code: 1121ms)
+ GET /swarm 200 in 511ms (next.js: 286ms, proxy.ts: 20ms, application-code: 206ms)
+ GET /swarm 200 in 265ms (next.js: 72ms, proxy.ts: 42ms, application-code: 151ms)
+[?25h

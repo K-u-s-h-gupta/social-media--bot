@@ -1,0 +1,53 @@
+[backend] bootstrap:start
+[32m[Nest] 10164  - [39m11/06/2026, 1:54:59 am [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +102ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDatabaseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mApiModule dependencies initialized[39m[38;5;3m +2ms[39m
+[backend] bootstrap:app-created
+[backend] bootstrap:listening 4000
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSwarmController {/swarm}:[39m[38;5;3m +652ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/platforms, GET} route[39m[38;5;3m +6ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials, POST} route[39m[38;5;3m +5ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials/:id/name, PUT} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials/:id/toggle, PUT} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deploy, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/attachments/upload, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/attachments/delete, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:id/pause, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:id/resume, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:deploymentId/agents/:agentId, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:deploymentId/agents/:agentId/pause, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:deploymentId/agents/:agentId/resume, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/logs, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +203ms[39m
+Backend started successfully on port 4000
+[33m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [33m   WARN[39m [38;5;3m[Configuration issue] [39m[33mMAIN_URL not set. [39m
+[33m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [33m   WARN[39m [33mConfiguration issues found: 1[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:55:00 am [32m    LOG[39m [32mBackend is running on: http://localhost:4000[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:59:39 am [32m    LOG[39m [38;5;3m[CredentialService] [39m[32mRestored session for reddit/kushg2850@gmail.com[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:48 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #1: action="search_and_comment" resolved=search_and_comment[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:48 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #1 pushed: name=subagent_1_comment_on_indian_startups[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:48 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #2: action="search_and_comment" resolved=search_and_comment[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:48 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #2 pushed: name=subagent_2_comment_on_indian_startups[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #3: action="search_and_comment" resolved=search_and_comment[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #3 pushed: name=subagent_3_comment_on_indian_startups[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #4: action="search_and_comment" resolved=search_and_comment[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #4 pushed: name=subagent_4_comment_on_indian_startups[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #5: action="search_and_comment" resolved=search_and_comment[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #5 pushed: name=subagent_5_comment_on_indian_startups[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans after loop: 5 tasks, 0 warnings[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans before align: 5 tasks, requestedCount=5, stagger=false[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans align returned: 5 tasks[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans result: 0 tasks after normalization, 1 warnings, 0 errors[39m
+[32m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [32m    LOG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[32mLLM plan produced no runnable tasks; retrying with deterministic parser.[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #1: action="search_and_comment" resolved=search_and_comment[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans task #1 pushed: name=commenter_startupindia_1[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:49 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans after loop: 1 tasks, 0 warnings[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:50 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans before align: 1 tasks, requestedCount=5, stagger=false[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:50 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans align returned: 5 tasks[39m
+[95m[Nest] 10164  - [39m11/06/2026, 1:59:50 am [95m  DEBUG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[95mnormalizePlans result: 5 tasks after normalization, 2 warnings, 0 errors[39m

@@ -1,0 +1,43 @@
+[backend] bootstrap:start
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:06 am [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:06 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +105ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:06 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDatabaseModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:06 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:06 am [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mApiModule dependencies initialized[39m[38;5;3m +4ms[39m
+[backend] bootstrap:app-created
+[backend] bootstrap:listening 4000
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSwarmController {/swarm}:[39m[38;5;3m +1121ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/platforms, GET} route[39m[38;5;3m +6ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials, POST} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials/:id/name, PUT} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials/:id, DELETE} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/credentials/:id/toggle, PUT} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deploy, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/attachments/upload, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/attachments/delete, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:id/pause, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:id/resume, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:deploymentId/agents/:agentId, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:deploymentId/agents/:agentId/pause, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/deployments/:deploymentId/agents/:agentId/resume, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:07 am [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/swarm/logs, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:08 am [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +281ms[39m
+Backend started successfully on port 4000
+[33m[Nest] 18548  - [39m11/06/2026, 1:44:08 am [33m   WARN[39m [38;5;3m[Configuration issue] [39m[33mMAIN_URL not set. [39m
+[33m[Nest] 18548  - [39m11/06/2026, 1:44:08 am [33m   WARN[39m [33mConfiguration issues found: 1[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:44:08 am [32m    LOG[39m [32mBackend is running on: http://localhost:4000[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:45:43 am [32m    LOG[39m [38;5;3m[CredentialService] [39m[32mRestored session for reddit/kushg2850@gmail.com[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:45:49 am [32m    LOG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[32mStarting for reddit/kushg2850@gmail.com[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:45:49 am [32m    LOG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[32mUsing pre-planned tasks: commenter_startupindia_1(45m), commenter_startupindia_1_fork_2(45m), commenter_startupindia_1_fork_3(45m), commenter_startupindia_1_fork_4(45m), commenter_startupindia_1_fork_5(45m)[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:45:49 am [32m    LOG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[32mAuto-stop scheduled in 2m (from prompt duration)[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:45:49 am [32m    LOG[39m [38;5;3m[DeploymentService] [39m[32mStarted agent d429f3a3-7100-42d0-aab0-202a3cbfa68b for reddit/kushg2850@gmail.com[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:46:48 am [32m    LOG[39m [38;5;3m[CredentialService] [39m[32mRestored session for reddit/kushg2850@gmail.com[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:46:57 am [32m    LOG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[32mStarting for reddit/kushg2850@gmail.com[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:46:57 am [32m    LOG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[32mUsing pre-planned tasks: commenter_startupindia_1(45m), commenter_startupindia_1_fork_2(45m), commenter_startupindia_1_fork_3(45m), commenter_startupindia_1_fork_4(45m), commenter_startupindia_1_fork_5(45m)[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:46:57 am [32m    LOG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[32mAuto-stop scheduled in 2m (from prompt duration)[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:46:57 am [32m    LOG[39m [38;5;3m[DeploymentService] [39m[32mStarted agent cbe02d80-037a-4cef-8517-802840b6e681 for reddit/kushg2850@gmail.com[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:47:49 am [32m    LOG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[32mDuration reached (2m), auto-stopping agent[39m
+[32m[Nest] 18548  - [39m11/06/2026, 1:47:49 am [32m    LOG[39m [38;5;3m[Agent:reddit/kushg2850@gmail.com] [39m[32mStopped reddit/kushg2850@gmail.com[39m

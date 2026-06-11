@@ -4,6 +4,8 @@ import { shuffle } from 'lodash';
 import { zodResponseFormat } from 'openai/helpers/zod';
 import { z } from 'zod';
 
+const TEXT_MODEL = process.env.OPENAI_TEXT_MODEL || 'gpt-4o-mini';
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || 'sk-proj-',
 });
@@ -36,7 +38,7 @@ export class OpenaiService {
     return (
       (
         await openai.chat.completions.parse({
-          model: 'gpt-4.1',
+          model: TEXT_MODEL,
           messages: [
             {
               role: 'system',
@@ -57,7 +59,7 @@ export class OpenaiService {
     return (
       (
         await openai.chat.completions.parse({
-          model: 'gpt-4.1',
+          model: TEXT_MODEL,
           messages: [
             {
               role: 'system',
@@ -91,7 +93,7 @@ export class OpenaiService {
           ],
           n: 5,
           temperature: 1,
-          model: 'gpt-4.1',
+          model: TEXT_MODEL,
         }),
         openai.chat.completions.create({
           messages: [
@@ -107,7 +109,7 @@ export class OpenaiService {
           ],
           n: 5,
           temperature: 1,
-          model: 'gpt-4.1',
+          model: TEXT_MODEL,
         }),
       ])
     ).flatMap((p) => p.choices);
@@ -145,7 +147,7 @@ export class OpenaiService {
           content,
         },
       ],
-      model: 'gpt-4.1',
+      model: TEXT_MODEL,
     });
 
     const { content: articleContent } = websiteContent.choices[0].message;
@@ -165,7 +167,7 @@ export class OpenaiService {
     const posts =
       (
         await openai.chat.completions.parse({
-          model: 'gpt-4.1',
+          model: TEXT_MODEL,
           messages: [
             {
               role: 'system',
@@ -198,7 +200,7 @@ export class OpenaiService {
               return (
                 (
                   await openai.chat.completions.parse({
-                    model: 'gpt-4.1',
+                    model: TEXT_MODEL,
                     messages: [
                       {
                         role: 'system',
@@ -234,7 +236,7 @@ export class OpenaiService {
         const parse =
           (
             await openai.chat.completions.parse({
-              model: 'gpt-4.1',
+              model: TEXT_MODEL,
               messages: [
                 {
                   role: 'system',

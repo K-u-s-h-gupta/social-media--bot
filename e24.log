@@ -1,0 +1,8 @@
+[ioredis] Unhandled error event: Error: connect ETIMEDOUT
+    at Socket.<anonymous> (D:\Prospektlab-bot\postiz-app\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:638:28)
+    at Socket.emit (node:events:524:28)
+    at Socket._onTimeout (node:net:609:8)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[31m[Nest] 12512  - [39m11/06/2026, 3:19:17 pm [31m  ERROR[39m [38;5;3m[DeploymentService] [39m[31mFailed to start agent for b2e5224d-9be3-490b-9e0a-ec4eaad5698d: X login timed out at https://x.com/i/jf/onboarding/web?mode=login[39m

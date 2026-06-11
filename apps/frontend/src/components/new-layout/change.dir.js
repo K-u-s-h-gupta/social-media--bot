@@ -1,0 +1,16 @@
+'use client';
+import useCookie from 'react-use-cookie';
+import { cookieName, fallbackLng, } from "../../../../../libraries/react-shared-libraries/src/translation/i18n.config";
+import i18next from 'i18next';
+import { useEffect } from 'react';
+export const ChangeDir = () => {
+    const currentLanguage = i18next.resolvedLanguage || fallbackLng;
+    const [language] = useCookie(cookieName, currentLanguage || fallbackLng);
+    useEffect(() => {
+        const rtlLanguages = ['he', 'ar'];
+        const dir = rtlLanguages.includes(language) ? 'rtl' : 'ltr';
+        document.documentElement.setAttribute('dir', dir);
+    }, []);
+    return null;
+};
+//# sourceMappingURL=change.dir.js.map
